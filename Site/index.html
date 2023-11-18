@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leds</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: #202020;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      min-height: 80vh;
+      padding: 10vh 0;
+    }
+
+    input {
+      background-color: #202020;
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+    }
+
+    button {
+      width: 100px;
+      height: 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 15px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: 0.25s;
+      &:hover {
+        transition: 0.5s;
+        opacity: 0.6;
+        cursor: pointer;
+      }
+    }
+  </style>
+
+  <body>
+    <input type="color" id="color" />
+    <button onclick="getColor()">Enviar!</button>
+  </body>
+  <script>
+    let currentURL = window.location.href;
+
+    function setColor() {
+      if (currentURL.includes("?rgb=")) {
+        let rgb = currentURL.split("?rgb=")[1];
+        // console.log(rgb)
+        let hex = rgbToHex(rgb);
+        let red = rgb.slice(0, 3)
+        // console.log(red)
+        let green = rgb.slice(3, 6)
+        // console.log(green)
+        let blue = rgb.slice(6, 9)
+        // console.log(blue)
+        document.querySelector("button").style.border = `2px solid rgb(${red}, ${green}, ${blue})`
+      }
+    }
+
+    function getColor() {
+      let color = document.querySelector("#color").value;
+
+      let a = document.createElement("a");
+      a.setAttribute("href", `?rgb=${hexToRgb(color)}`);
+      a.click();
+    }
+
+    function hexToRgb(hex) {
+      // Remove o prefixo '#', se houver.
+      hex = hex.replace("#", "");
+
+      // Divide a string em três partes, uma para cada componente RGB.
+      let [r, g, b] = hex.match(/[0-9a-f]{2}/g);
+
+      // Converte cada componente de hex para um valor decimal.
+      r = parseInt(r, 16);
+      g = parseInt(g, 16);
+      b = parseInt(b, 16);
+
+      if (`${r}`.length == 2) {
+        r = "0" + r;
+      } else if (`${r}`.length == 1) {
+        r = "00" + r;
+      }
+
+      if (`${g}`.length == 2) {
+        g = "0" + g;
+      } else if (`${g}`.length == 1) {
+        g = "00" + g;
+      }
+
+      if (`${b}`.length == 2) {
+        b = "0" + b;
+      } else if (`${b}`.length == 1) {
+        b = "00" + b;
+      }
+
+      // Retorna os valores RGB como um array.
+      return `${r}${g}${b}`;
+    }
+
+    function rgbToHex(rgb) {
+      // Converte cada componente RGB para um valor hexadecimal.
+      let r = rgb[0].toString(16);
+      let g = rgb[1].toString(16);
+      let b = rgb[2].toString(16);
+
+      // Adiciona zeros à esquerda se necessário para que cada componente tenha dois dígitos.
+      r = r.padStart(2, "0");
+      g = g.padStart(2, "0");
+      b = b.padStart(2, "0");
+
+      // Retorna a cor hexadecimal.
+      return "#" + r + g + b;
+    }
+
+    setColor();
+  </script>
+</html>
