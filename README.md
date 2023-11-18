@@ -12,7 +12,7 @@ Acredito que meus principais desafios nesse projeto foram:
 ## Aprendizados
 
 Por final aprendi algumas coisas interessantes como: 
-### Criando uma server wifi com o Esp32
+### Criando uma server Wifi com o Esp32
 
 ```c++
 #include <iostream>
