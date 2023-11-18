@@ -44,19 +44,16 @@ void setup() {
 }
 ```
 
-### Convertendo tipagem das variáveis
+## Convertendo tipagem das variáveis
 
-
-# Int para String
-
+### Int para String
 ```c++
 Como nesse caso: 
   String red = String(currentLine[33]) + String(currentLine[34]) + String(currentLine[35]);
   Eu passo por parâmetro uma variável do tipo int, dessa forma: String(variavel_int) 
 ```
 
-# String para Int
-
+### String para Int
 ```c++
 Como nesse caso: 
   String red = String(currentLine[33]) + String(currentLine[34]) + String(currentLine[35]);
