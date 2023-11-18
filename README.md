@@ -47,7 +47,7 @@ void setup() {
 ### Convertendo tipagem das variáveis
 
 
-##Int para String
+## Int para String
 
 ```c++
 Como nesse caso: 
@@ -55,7 +55,7 @@ Como nesse caso:
   Eu passo por parâmetro uma variável do tipo int, dessa forma: String(variavel_int) 
 ```
 
-##String para Int
+## String para Int
 
 ```c++
 Como nesse caso: 
