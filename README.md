@@ -58,7 +58,7 @@ Nesse caso eu pego a variável String "red", declarada no exemplo acima e simple
 analogWrite(PIN_RED, red.toInt());
 ```
 
-### Recebendo valores da web
+## Recebendo valores da web
 ```c++
 #define PIN_RED    23 // GPIO23
 #define PIN_GREEN  22 // GPIO22
@@ -81,7 +81,7 @@ void loop() {
 }
 ```
 
-### Recebendo valores via GET
+## Recebendo valores via GET
 No trecho abaixo pego os indices de cada parâmetro da url (sendo do tipo String) e os converto para int.
 Verfiquei se o método continha "Referer", se tivesse, seria a minha url. Em seguida verifiquei se a "currentLine" atual tinha exatamente 44 caractéres. Para ficar mais fácil de entender, a url que ele vai ler é parecida com a seguinte url:
 ```c++
