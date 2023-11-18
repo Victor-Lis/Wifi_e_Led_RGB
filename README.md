@@ -44,6 +44,13 @@ void setup() {
 }
 ```
 
+### Convertendo tipagem das variáveis
+Int to String
+Para converter uma Int para uma String, basta escrever String(variavelInt)
+
+```c++
+Como nesse caso
+```
 
 ### Recebendo valores da web
 ```c++
@@ -108,5 +115,5 @@ void loop(){
 - [@Iago-Rodrigues](https://github.com/iagoRRocha)
 - [@Karlos Eduardo](https://github.com/ImpressoraTelepatica)
 - [@Miguel Rosillo](https://github.com/MiguelRED1209)
-- [@Pedro Henrique]()
+- [@Pedro Henrique](https://github.com/PedroHenriqueMoraesSamsonas)
 - [@Victor-Lis](https://github.com/Victor-Lis)
