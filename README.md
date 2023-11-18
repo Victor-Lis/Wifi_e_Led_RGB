@@ -47,17 +47,15 @@ void setup() {
 ## Convertendo tipagem das variáveis
 
 ### Int para String
+Nesse caso eu passo uma variável do tipo Int como parâmetro entre a String(Int).
 ```c++
-Como nesse caso: 
   String red = String(currentLine[33]) + String(currentLine[34]) + String(currentLine[35]);
-  Eu passo por parâmetro uma variável do tipo int, dessa forma: String(variavel_int) 
 ```
 
 ### String para Int
+Nesse caso eu pego a variável String "red", declarada no exemplo acima e simplesmente adiciono .toInt(), transformando-a em Int.
 ```c++
-Como nesse caso: 
-  String red = String(currentLine[33]) + String(currentLine[34]) + String(currentLine[35]);
-  Eu apenas necessito colocar uma variavel tipo String.toInt(), como nesse caso: analogWrite(PIN_RED, red.toInt());
+  analogWrite(PIN_RED, red.toInt());
 ```
 
 ### Recebendo valores da web
