@@ -49,13 +49,13 @@ void setup() {
 ### Int para String
 Nesse caso eu passo uma variável do tipo Int como parâmetro entre a String(Int).
 ```c++
-  String red = String(currentLine[33]) + String(currentLine[34]) + String(currentLine[35]);
+String red = String(currentLine[33]) + String(currentLine[34]) + String(currentLine[35]);
 ```
 
 ### String para Int
 Nesse caso eu pego a variável String "red", declarada no exemplo acima e simplesmente adiciono .toInt(), transformando-a em Int.
 ```c++
-  analogWrite(PIN_RED, red.toInt());
+analogWrite(PIN_RED, red.toInt());
 ```
 
 ### Recebendo valores da web
