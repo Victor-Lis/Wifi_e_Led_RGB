@@ -105,5 +105,8 @@ void loop(){
 [Ver vídeo do projeto funcionando!](https://youtube.com/shorts/0fI4GBiOdVI?feature=share)
 ## Autores e Pessoas que ensinei durante o Projeto.
 
-- [@Victor-Lis](https://github.com/Victor-Lis)
 - [@Iago-Rodrigues](https://github.com/iagoRRocha)
+- [@Karlos Eduardo](https://github.com/ImpressoraTelepatica)
+- [@Miguel Rosillo](https://github.com/MiguelRED1209)
+- [@Pedro Henrique)[]
+- [@Victor-Lis](https://github.com/Victor-Lis)
